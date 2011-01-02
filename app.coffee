@@ -25,6 +25,14 @@ app.addField = () ->
   $('#wrapper').append app.field
 
 
+app.renderUser = user
+  user.anim
+    translateX: user.x + "px"
+    translateY: user.y + "px"
+
+app.updateUsers data
+  for user in data
+    app.renderUser user
 
 app.log = (str) ->
   console.log str
